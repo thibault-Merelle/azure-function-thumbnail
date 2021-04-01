@@ -30,7 +30,7 @@ jobs:
         popd
     - name: 'Run Azure Functions Action'
       uses: Azure/functions-action@v1
-      id: mythumbnail
+      id: functhumbnail
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
