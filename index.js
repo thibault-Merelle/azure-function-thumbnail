@@ -1,7 +1,9 @@
-var Jimp = require("jimp");
+const Jimp = require("jimp");
+const utils = require("utils");
 
 module.exports = (context, myBlob) => {
     context.log("blob trigger function processed blob \n Blob:", context.bindingData.blobTrigger, "\n Blob Size:", myBlob.length, "Bytes");
+    
     // Read image with Jimp
     Jimp.read(myBlob).then((image) => {
         // Manipulate image
